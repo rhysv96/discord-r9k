@@ -60,7 +60,7 @@ impl EventHandler for Handler {
         let message_id = msg.id.to_string();
         let author_id = msg.author.id.to_string();
 
-        if author_id == "141320575132893184" {
+        if author_id == "141320575132893184" || author_id == "152753203568574464" {
             let message_url = format!("https://discord.com/channels/{}/{}/{}", message.guild_id, message.channel_id, message.message_id);
             msg.reply(&ctx.http, "retard detected").await.expect("Failed to reply");
         }
